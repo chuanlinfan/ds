@@ -12,7 +12,7 @@ public:
 	MyStack(int s); // create
 	~MyStack(); //destroy
 
-	void push(T);
+	void push(T c);
 	T pop();
 };
 

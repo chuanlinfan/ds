@@ -6,26 +6,42 @@
 	* @date    : 2020-4-7
 *********************************************************/
 
+//include file
 #include <iostream>
-#include "MyStack.h"
+#include <string>
+#include "mystack.h"
+#include "myqueue.h"
 using namespace std;
 
+
+/******************************************************** 
+    *  @function :  main()
+    *  @brief    :  test DS 
+    *  @input    : 
+    *  @output   : 
+    *  @return   : 
+    *  @author   :  FAN CHUANLIN  2020/04/09 21:34
+	*  @History  :
+********************************************************/
 int main()
 {
+    MyQueue<string> qs(5);
+	char sc[500];
+
 	cin >> noskipws;
-    MyStack<char> sc(200);
-	char c;
-	int size = 0;
-	while (cin >> c)
+	while (cin.getline(sc, 200))
 	{
-		sc.push(c);
-		size++;
+		qs.EnQueue(sc);
 	}
-	
-	int i = 0;
-	while (i++< size)
+
+	while (true)
 	{
-		cout << sc.pop();
+		if (qs.IsEmpty())
+		{
+			break;
+		}
+		cout << qs.DeQueue() << endl;
 	}
+
 	return 0;
 }

@@ -26,5 +26,8 @@
     <ClInclude Include="mystack.h">
       <Filter>ds</Filter>
     </ClInclude>
+    <ClInclude Include="myqueue.h">
+      <Filter>ds</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
